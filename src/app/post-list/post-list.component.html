@@ -1,0 +1,28 @@
+<li class="list-group-item postComponnent" *ngFor="let post of postFromPostListComponent " [ngClass]="{'list-group-item-success': post.loveIts > 0,
+   'list-group-item-danger': post.loveIts < 0}">
+   <!--Debut bloc contenant le titre et la date de creation-->
+    <div class="row">
+        <!--Contient le titre du post-->
+        <h3 class="col-xs-6 col-sm-6 col-md-6 col-lg-7 postTitle">
+          {{post.tilte}}
+        </h3>
+        <!--contient la date de creation du post-->
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-5 dateCreation">
+          {{post.created_at | date : 'dd/MM/yyyy, hh:mm a' }}
+        </div>
+    </div>
+<!--Fin bloc contenant le titre et la date de creation-->
+
+<!--Debut bloc contenant le contenu du post-->
+    <div class="row postContent">
+      {{post.content}}
+    </div>
+<!--Fin bloc contenant le contenu du post-->
+
+<!--Debut bloc contenant les boutons Love it! et Don't love it!-->
+    <div class="blocBtn">
+        <button (click)="addLike(post)" [ngClass]="['first', 'second']" type="button" class="likeBtn btn btn-success btn-sm">Love it!</button>
+        <button (click) ="removeLike(post)" class="btn btn-danger btn-sm">Don't love it!</button>
+    </div>
+  <!--Debut bloc contenant les boutons Love it! et Don't love it!-->
+</li>

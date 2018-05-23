@@ -1,0 +1,38 @@
+$screen-xs-min: 767px;
+
+.likeBtn {
+    margin-right: 10px;
+}
+
+.blocBtn {
+  display: block;
+}
+
+.dateCreation {
+  font-style: italic;
+  color: gray;
+  padding-right: 16px;
+  padding-left: 0px;
+  text-align: right;
+}
+
+.postTitle {
+  margin-top: 0px;
+  padding-left: 16px;
+  padding-right: 0px;
+}
+
+.postContent {
+    padding-left: 16px;
+    margin-bottom: 12px;
+}
+
+.postComponnent {
+  min-width: 537px;
+}
+
+  @media (max-width: $screen-xs-min) {
+    .postComponnent {
+       min-width: 460px;
+        }
+   }
